@@ -8,22 +8,13 @@ import cloud_config_swift
 struct ContentView: View {
 
   @ObservedObject var cloudconfig = CloudConfig.shared
-
-  var subscriptions = [AnyCancellable]()
-
-  init() {
-
-
-  }
-
-    var body: some View {
-      VStack {
-        Text("Config")
-        Text(cloudconfig.config.value?.rawString ?? "")
-              .padding()
-
-      }
+  
+  var body: some View {
+    VStack {
+      Text("Config")
+      Text(cloudconfig.config.value?.rawString ?? "")
     }
+  }
 }
 
 struct ContentView_Previews: PreviewProvider {
